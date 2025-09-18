@@ -1,0 +1,217 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #141821, #0a0d12 60%, #050608 100%);
+  color: #e6e6e6;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== Navbar ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 6%;
+  background: rgba(10, 12, 20, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo span {
+  background: linear-gradient(90deg, #00d2ff, #7a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #00d2ff;
+}
+
+/* ===== Navbar (hover effect) ===== */
+nav ul li a {
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00d2ff, #7a5cff);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ===== Hero Section ===== */
+.about {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  margin: 0px;
+}
+
+.about-container {
+  max-width: 850px;
+  margin: 0px;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(0, 210, 255, 0.8);
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 0px
+  30px rgba(0, 210, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 40px rgba(122, 92, 255, 0.6);
+}
+
+.about-text h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #00d2ff, #0c052b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-text p {
+  color: #c9c9c9;
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Quote Section ===== */
+.quote {
+  padding: 4rem 2rem;
+  text-align: center;
+  margin: 2rem auto;
+  border-radius: 20px;
+  max-width: 500px;
+  background: linear-gradient(145deg, rgba(20,25,40,0.95), rgba(10,12,20,0.9));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 25px rgba(0, 210, 255, 0.2);
+}
+
+.quote h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-style: italic;
+  background: linear-gradient(90deg, #00d2ff, #7a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Quote Section (hover effect) ===== */
+.quote {
+  padding: 4rem 2rem;
+  text-align: center;
+  margin: 2rem auto;
+  border-radius: 16px;
+  max-width: 900px;
+  background: linear-gradient(145deg, rgba(20,25,40,0.95), rgba(10,12,20,0.9));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 25px rgba(0, 210, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote:hover {
+  transform: translateY(-25px);
+  box-shadow: 0px 0px 35px rgba(122, 92, 255, 0.4);
+}
+
+
+/* ===== CTA Section ===== */
+.cta {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+  color: #e6e6e6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  background: linear-gradient(90deg, #00d2ff, #7a5cff);
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 5px 25px rgba(0, 210, 255, 0.4);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 30px rgba(122, 92, 255, 0.6);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 3rem;
+}
